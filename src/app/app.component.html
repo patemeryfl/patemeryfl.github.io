@@ -1,0 +1,76 @@
+<md-sidenav-container>
+
+  <md-sidenav #sidenav mode="push">
+    <div class="branding"><span>Menu</span></div>
+    <md-nav-list>
+      <a md-list-item *ngFor="let item of navigationSideMenu" (click)="sidenav.close()"
+         [routerLink]="[item.link]" routerLinkActive="active">
+        {{item.label}}
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+
+  <div class="wrapper">
+
+    <md-toolbar color="primary">
+      <button md-icon-button class="hidden-md-up" (click)="sidenav.open()">
+        <md-icon>menu</md-icon>
+      </button>
+
+      <span routerLink="" class="navbar-brand spacer hidden-sm-down">Pat Emery</span>
+
+      <span class="hidden-sm-down">
+        <button md-button class="nav-button" *ngFor="let item of navigation"
+            [routerLink]="[item.link]" routerLinkActive="active">
+          {{item.label}}
+        </button>
+      </span>
+
+      <button md-button class="sign-in-button"
+              *ngIf="!isAuthenticated"
+              (click)="onLoginClick()">
+        Sign in
+      </button>
+
+      <button *ngIf="isAuthenticated"
+              md-icon-button
+              [mdMenuTriggerFor]="toolbarUserMenu">
+        <md-icon>person</md-icon>
+      </button>
+      <md-menu #toolbarUserMenu="mdMenu">
+        <button md-menu-item (click)="onLogoutClick()">
+          <md-icon>power_settings_new</md-icon>
+          <span>Logout</span>
+        </button>
+      </md-menu>
+
+      <button md-icon-button routerLink="settings" class="hidden-sm-down">
+        <md-icon>settings</md-icon>
+      </button>
+
+      <a mdTooltip="Check out my GitHub Projects"
+         mdTooltipPosition="before"
+         md-icon-button class="link"
+         href="https://github.com/patemeryfl"
+         target="_blank">
+        <i class="fa fa-github fa-2x"></i>
+      </a>
+
+    </md-toolbar>
+
+    <div class="content"
+         [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+
+    <div class="footer">
+      <div class="row">
+        <div class="col-12 signature">
+          &#169; {{year}} - Pat Emery
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</md-sidenav-container>

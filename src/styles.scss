@@ -1,0 +1,112 @@
+@import 'styles-variables';
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/utilities';
+
+@import 'styles-reset';
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@import 'default-theme.scss';
+@import 'light-theme.scss';
+@import 'black-theme.scss';
+
+@import 'styles-reset.scss-theme';
+@import 'app/app.component.scss-theme';
+@import 'app/shared/big-input/big-input.component.scss-theme';
+@import 'app/static/about/about.component.scss-theme';
+@import 'app/examples/todos/todos.component.scss-theme';
+@import 'app/examples/stock-market/stock-market.component.sccs-theme';
+@import 'app/examples/theming/parent/parent.component.scss-theme';
+@import 'app/examples/theming/child/child.component.scss-theme';
+
+@mixin custom-components-theme($theme) {
+  @include anms-styles-reset-theme($theme);
+  @include anms-app-component-theme($theme);
+  @include anms-about-component-theme($theme);
+  @include anms-big-input-component-theme($theme);
+  @include anms-todos-component-theme($theme);
+  @include anms-examples-component-theme($theme);
+  @include anms-parent-component-theme($theme);
+  @include anms-child-component-theme($theme);
+}
+
+.black-theme {
+  @include angular-material-theme($anms-black-theme);
+  @include custom-components-theme($anms-black-theme);
+}
+
+.default-theme {
+  @include angular-material-theme($anms-theme);
+  @include custom-components-theme($anms-theme);
+}
+
+.light-theme {
+  @include angular-material-theme($anms-light-theme);
+  @include custom-components-theme($anms-light-theme);
+}
+
+/*Style for loader*/
+.loader {
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.loader #spinner {
+  box-sizing: border-box;
+  stroke: #673AB7;
+  stroke-width: 3px;
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+  animation: line 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite, rotate 1.6s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+
+@-webkit-keyframes line {
+  0% {
+    stroke-dasharray: 2, 85.964;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  50% {
+    stroke-dasharray: 65.973, 21.9911;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 2, 85.964;
+    stroke-dashoffset: -65.973;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+
+
