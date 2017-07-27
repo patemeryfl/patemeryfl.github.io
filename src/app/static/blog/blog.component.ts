@@ -13,7 +13,8 @@ export class BlogComponent implements OnInit {
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
   versions = env.versions;
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   openLink(link: string) {
     window.open(link, '_blank');

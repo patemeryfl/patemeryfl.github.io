@@ -9,9 +9,9 @@ var config = {
 
 firebase.initializeApp(config);
 
-var limit = 1;
+var limit = 3;
 var count = 0;
-var trueData = 1;
+var trueData = 3;
 var flag = true;
 var articles = [];
 
@@ -19,30 +19,30 @@ firebase.database().ref('/article_group/article_list')
   .orderByChild('published').limitToLast(limit).startAt(1)
   .on('child_added', function(data) {
 
-    firebase.database().ref('/article_group/article/' + data.key)
-      .on('value', function(articleData) {
-        count ++;
-        articles.push({
-          id: data.key,
-          published: data.val().published,
-          data: articleData.val()
-        });
-        articles.sort(function(a, b) {
-          return a.published < b.published
-        });
-        producer();
-
-      }, function(err) {
-        count ++;
-        showError(err);
-        producer()
+firebase.database().ref('/article_group/article/' + data.key)
+    .on('value', function(articleData) {
+      count ++;
+      articles.push({
+        id: data.key,
+        published: data.val().published,
+        data: articleData.val()
       });
+      articles.sort(function(a, b) {
+        return a.published < b.published
+      });
+      producer();
+
+    }, function(err) {
+      count ++;
+      showError(err);
+      producer()
+    });
   }, function(err) {
-    alert(err);
-  });
+  alert(err);
+});
 
 function producer() {
-  console.log(count, trueData);
+  // console.log(count, trueData);
   if (count === trueData && flag) {
     for (var i in articles) {
       createArticle(articles[i].id, articles[i].published, articles[i].data)
@@ -58,34 +58,22 @@ function showError(err) {
 }
 
 function createArticle(id, published, data) {
-  console.log(id);
-  var blog = document.createElement('div');
-  var blogs = document.createElement('div');
+  var el = document.createElement('div');
   var title = document.createElement('h1');
   var body = document.createElement('p');
   var byline = document.createElement('span');
+  el.classList.add('card');
+  title.classList.add('card-title');
+  body.classList.add('card-text');
+  byline.classList.add('card-subtitle');
+
   title.innerHTML = data.title;
   body.innerHTML = data.body;
-  byline.innerHTML = new Date(published);
-
-  blog.innerHTML =  '<div class="panel-heading">' +
-                    '<p style="margin-top: -30px!important;" id="blogTitle"></p>' +
-                    '<p style="margin-top: -30px!important; text-align: right" id="blogDate"></p>' +
-                    '</div>' +
-                    '<div class="panel-body">' +
-                    '<p id="blogContent"></p>' +
-                    '<div class="text-center panel-heading">- <a href="#">Share</a> // <a href="#">Comment</a> // <a href="#">Copy</a> -' +
-                    '</div>' +
-                    '</div>';
-
-  document.getElementById('blogTitle').appendChild(title);
-  document.getElementById('blogDate').appendChild(byline);
-  document.getElementById('blogContent').appendChild(body);
-
-  blogs.innerHTML = blog;
-
-  document.getElementById('content').appendChild(blog);
-
+  // byline.innerHTML = 'Date: '+ new Date(published);
+    el.appendChild(title)
+    el.appendChild(byline)
+    el.appendChild(body)
+    document.getElementById('content').appendChild(el);
 }
 
 

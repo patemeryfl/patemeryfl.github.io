@@ -29,12 +29,12 @@
   }
 
   .intro {
-    width: 800px;
+    width: 80%;
     margin: 50px auto 0 auto;
     padding-bottom: 0px;
     font-size: 1.2em;
     letter-spacing: .01px;
-    overflow-wrap: break-word;
+
     z-index: 1;
     background-color: rgba(180,180,180,0.5);
     border-radius: 20px;
@@ -80,6 +80,11 @@
 
     .get-started {
       width: auto;
+    }
+    .about {
+      margin-top: -135px;
+      margin-left: 160px;
+      padding-bottom:30px;
     }
   }
 }

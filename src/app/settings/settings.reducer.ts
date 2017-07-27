@@ -1,7 +1,7 @@
 import { Action } from '@app/core';
 
 export const initialState = {
-  theme: 'DEFAULT-THEME'
+  theme: 'BLACK-THEME'
 };
 
 export const SETTINGS_KEY = 'SETTINGS';

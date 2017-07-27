@@ -6,7 +6,8 @@ import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 
 import { ExamplesRoutingModule } from './examples-routing.module';
-import { ExamplesComponent } from './examples/examples.component';
+import { ItemComponent } from './items/item.component';
+
 import { TodosComponent } from './todos/todos.component';
 import { todosReducer } from './todos/todos.reducer';
 import { TodosEffects } from './todos/todos.effects';
@@ -32,7 +33,7 @@ import { ChildComponent } from './theming/child/child.component';
     ])
   ],
   declarations: [
-    ExamplesComponent,
+    ItemComponent,
     TodosComponent,
     StockMarketComponent,
     ParentComponent,
@@ -42,7 +43,7 @@ import { ChildComponent } from './theming/child/child.component';
     StockMarketService
   ]
 })
-export class ExamplesModule {
+export class MenuModule {
 
   constructor() {}
 

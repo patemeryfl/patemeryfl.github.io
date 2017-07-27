@@ -4,7 +4,6 @@ var dataCacheName = 'PatEmery-v1';
 var cacheName = 'PatEmery-final-1';
 var filesToCache = [
   '../index.html',
-  '/src/styles.css',
   '../assets/manifest.json'
 ];
 

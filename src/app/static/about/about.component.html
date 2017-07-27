@@ -3,39 +3,56 @@
     <div class="container">
       <h1>Welcome.</h1>
         <div class="intro container" [ngClass]="animateOnRouteEnter"><br>
-          <div class="col-xs-3">
-                <div style="margin-bottom: 10px">
-                  <img src="../../assets/images/ProfilePhotoSmall.png" alt="This is me"><br>
-                </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div style="margin-bottom: 10px">
+                <img src="../../assets/images/ProfilePhotoSmall.png" alt="This is me"><br>
+              </div>
+              <div class="about">
                 Name: Pat Emery<br>Location: Boston<br>Occupation: Grad Student<br> Github: patemeryfl
                 <div class="" style="margin-bottom: 10px; margin-top: 10px">
-                  <a href="https://www.facebook.com/Emery.Pat" target="_blank">
+                  <a  mdTooltip="Facebook"
+                      mdTooltipPosition="before"
+                      href="https://www.facebook.com/Emery.Pat" target="_blank" rel="noopener">
                     <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
                   </a>
-                  <a href="https://www.instagram.com/patemeryfl/" target="_blank">
+                  <a  mdTooltip="Instagram"
+                      mdTooltipPosition="before"
+                      href="https://www.instagram.com/patemeryfl/" target="_blank" rel="noopener">
                     <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
                   </a>
-                  <a href="https://www.twitter.com/patemeryfl" target="_blank">
+                  <a  mdTooltip="Twitter"
+                      mdTooltipPosition="before"
+                      href="https://www.twitter.com/patemeryfl" target="_blank" rel="noopener">
                     <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
                   </a>
-                  <a href="mailto:patemery21@gmail.com?Subject=Hey%20Pat" target="_top">
-                    <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                  <a mdTooltip="Github"
+                     mdTooltipPosition="before"
+                     href="https://www.github.com/patemeryfl" target="_top" rel="noopener">
+                    <i class="fa fa-github fa-2x" aria-hidden="true"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/patrick-emery-20234241" target="_blank">
+                  <a mdTooltip="LinkedIn"
+                     mdTooltipPosition="before"
+                     href="https://www.linkedin.com/in/patrick-emery-20234241" target="_blank" rel="noopener">
                     <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
                   </a>
-                  <a href="http://www.youtube.com/c/PatEmery" target="_blank">
+                  <a mdTooltip="Youtube"
+                     mdTooltipPosition="before"
+                     href="http://www.youtube.com/c/PatEmery" target="_blank" rel="noopener">
                     <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
-                 </a>
-                </div>
-          </div>
-          <div class="col-xs-9">
-            I enjoy writing and designing applications and using various frameworks to optimize functionality.
-            I am passionate about intuitive user-interfaces that focus on the human aspect of design and features.
-            Each application I have written has helped me build my knowledge of the web applications and their
-            stack environment. I spend every day learning about the new enhancements to different programming
-            languages and finding ways to improve my code. My objective is to help build functional and
-            well-designed applications that will help guide the way that we interact with technology.
+                  </a>
+              </div>
+
+              </div>
+            </div>
+            <div class="col-sm-9" style="padding-bottom: 15px">
+              I enjoy writing and designing applications and using various frameworks to optimize functionality.
+              I am passionate about intuitive user-interfaces that focus on the human aspect of design and features.
+              Each application I have written has helped me build my knowledge of the web applications and their
+              stack environment. I spend every day learning about the new enhancements to different programming
+              languages and finding ways to improve my code. My objective is to help build functional and
+              well-designed applications that will help guide the way that we interact with technology.
+            </div>
           </div>
         </div>
     </div>

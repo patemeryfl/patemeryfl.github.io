@@ -4,11 +4,11 @@ import { routerTransition } from '@app/core';
 
 @Component({
   selector: 'anms-examples',
-  templateUrl: './examples.component.html',
-  styleUrls: ['./examples.component.scss'],
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.scss'],
   animations: [routerTransition]
 })
-export class ExamplesComponent implements OnInit {
+export class ItemComponent implements OnInit {
 
   examples = [
     { link: 'todos', label: 'Resume' },

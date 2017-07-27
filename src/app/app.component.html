@@ -1,5 +1,4 @@
 <md-sidenav-container>
-
   <md-sidenav #sidenav mode="push">
     <div class="branding"><span>Menu</span></div>
     <md-nav-list>
@@ -26,11 +25,11 @@
         </button>
       </span>
 
-      <button md-button class="sign-in-button"
-              *ngIf="!isAuthenticated"
-              (click)="onLoginClick()">
-        Sign in
-      </button>
+      <!--<button md-button class="sign-in-button"-->
+              <!--*ngIf="!isAuthenticated"-->
+              <!--(click)="onLoginClick()">-->
+        <!--Sign in-->
+      <!--</button>-->
 
       <button *ngIf="isAuthenticated"
               md-icon-button
@@ -48,13 +47,13 @@
         <md-icon>settings</md-icon>
       </button>
 
-      <a mdTooltip="Check out my GitHub Projects"
-         mdTooltipPosition="before"
-         md-icon-button class="link"
-         href="https://github.com/patemeryfl"
-         target="_blank">
-        <i class="fa fa-github fa-2x"></i>
-      </a>
+      <!--<a mdTooltip="Check out my GitHub Projects"-->
+         <!--mdTooltipPosition="before"-->
+         <!--md-icon-button class="link"-->
+         <!--href="https://github.com/patemeryfl"-->
+         <!--target="_blank">-->
+        <!--<i class="fa fa-github fa-2x"></i>-->
+      <!--</a>-->
 
     </md-toolbar>
 
