@@ -8,10 +8,10 @@ import { actionRetrieveStock, selectorStocks } from './stock-market.reducer';
 
 @Component({
   selector: 'anms-stock-market',
-  templateUrl: './stock-market.component.html',
-  styleUrls: ['./stock-market.component.scss']
+  templateUrl: './education.component.html',
+  styleUrls: ['./education.component.scss']
 })
-export class StockMarketComponent implements OnInit, OnDestroy {
+export class EducationComponent implements OnInit, OnDestroy {
 
   private unsubscribe$: Subject<void> = new Subject<void>();
 

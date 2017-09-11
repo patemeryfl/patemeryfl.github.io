@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'anms-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.scss']
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class ParentComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
   themeSrc: string = require('!raw-loader!./parent.component.scss-theme.scss');
 

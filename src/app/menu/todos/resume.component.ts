@@ -19,10 +19,10 @@ import {
 
 @Component({
   selector: 'anms-todos',
-  templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.scss']
+  templateUrl: './resume.component.html',
+  styleUrls: ['./resume.component.scss']
 })
-export class TodosComponent implements OnInit, OnDestroy {
+export class ResumeComponent implements OnInit, OnDestroy {
 
   private unsubscribe$: Subject<void> = new Subject<void>();
 
