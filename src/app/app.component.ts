@@ -27,7 +27,7 @@ export class AppComponent implements OnInit, OnDestroy {
   version = env.versions.app;
   year = new Date().getFullYear();
   navigation = [
-    { link: 'about', label: 'Home' },
+    { link: 'home', label: 'Home' },
     { link: 'projects', label: 'Projects' },
     { link: 'blog', label: 'Blog' },
     { link: 'contact', label: 'Contact' },

@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ItemComponent } from './items/item.component';
 import { ResumeComponent } from './resume/resume.component';
 import { EducationComponent } from './education/education.component';
-import { AboutComponent } from './about/parent/about.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {

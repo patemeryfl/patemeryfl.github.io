@@ -1,8 +1,6 @@
 <div class="container">
   <h1 class="main-heading">Contact</h1>
   <div class="card">
-    <div class="card-header">
-    </div>
     <div class="card-block">
       <div class="row">
         Are you interested in some of the work that I do?<br>
@@ -28,24 +26,23 @@
             <li>MongoDB</li>
           </ul>
         </div>
-      </div>
     </div>
+    <form id="contactForm">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="formName" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+        <br>
+        <div class="row">
+          <div class="col-md-12 form-group">
+            <button class="btn btn-success pull-right" type="submit">Send</button>
+          </div>
+        </div>
+    </form>
   </div>
-  <form id="contactForm">
-    <div class="row">
-      <div class="col-sm-6 form-group">
-        <input class="form-control" id="formName" name="name" placeholder="Name" type="text" required>
-      </div>
-      <div class="col-sm-6 form-group">
-        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-      </div>
-    </div>
-    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-    <br>
-    <div class="row">
-      <div class="col-md-12 form-group">
-        <button class="btn btn-success pull-right" type="submit">Send</button>
-      </div>
-    </div>
-  </form>
 </div>

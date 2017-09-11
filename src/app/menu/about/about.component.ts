@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  themeSrc: string = require('!raw-loader!./parent.component.scss-theme.scss');
-
   constructor() {}
 
   ngOnInit() {

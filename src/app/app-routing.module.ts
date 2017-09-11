@@ -13,7 +13,7 @@ const routes: Routes = [
     component: SettingsComponent
   }, {
     path: 'menu',
-    loadChildren: 'app/menu/examples.module#MenuModule',
+    loadChildren: 'app/menu/nav.module#MenuModule',
   }, {
     path: '**',
     redirectTo: 'about'

@@ -6,13 +6,27 @@
 
 .card {
   font-size: 17px;
-  margin-left: 20px;
+  background-color: #222222;
 }
+
+.card-block {
+  margin-left: 20px
+}
+
 .card ul, li {
-  margin-left: -10px;
+  margin-left: 0px;
 }
 
 .main-heading {
   text-transform: uppercase;
   margin: 0 0 20px 0
+}
+
+@media screen and (max-width: 400px){
+  ul {
+    margin-left: -30px !important;
+  }
+  form {
+    margin-left: -20px !important;
+  }
 }

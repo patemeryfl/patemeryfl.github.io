@@ -16,11 +16,10 @@
 
 @import 'styles-reset.scss-theme';
 @import 'app/app.component.scss-theme';
-@import 'app/static/about/about.component.scss-theme';
+@import 'app/static/home/home.component.scss-theme';
 @import 'app/menu/resume/resume.component.scss-theme';
 @import 'app/menu/education/education.component.sccs-theme';
-@import 'app/menu/about/parent/parent.component.scss-theme';
-@import 'app/menu/about/child/child.component.scss-theme';
+@import 'app/menu/about/about.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   @include anms-styles-reset-theme($theme);
@@ -28,8 +27,6 @@
   @include anms-about-component-theme($theme);
   @include anms-todos-component-theme($theme);
   @include anms-examples-component-theme($theme);
-  @include anms-parent-component-theme($theme);
-  @include anms-child-component-theme($theme);
 }
 
 .black-theme {

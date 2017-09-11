@@ -4,10 +4,10 @@ import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
 
 @Component({
   selector: 'anms-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class HomeComponent implements OnInit {
   pageTitle = 'Home'
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
 
