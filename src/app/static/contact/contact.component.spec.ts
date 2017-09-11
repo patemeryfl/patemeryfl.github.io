@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
-import { FeaturesComponent } from './contact.component';
+import { ContactComponent } from './contact.component';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;

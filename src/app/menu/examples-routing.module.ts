@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ItemComponent } from './items/item.component';
-import { TodosComponent } from './todos/todos.component';
-import { StockMarketComponent } from './stock-market/stock-market.component';
-import { ParentComponent } from './theming/parent/parent.component';
+import { ResumeComponent } from './resume/resume.component';
+import { EducationComponent } from './education/education.component';
+import { AboutComponent } from './about/parent/about.component';
 
 const routes: Routes = [
   {
@@ -13,17 +13,17 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'todos',
+        redirectTo: 'resume',
         pathMatch: 'full'
       }, {
-        path: 'todos',
-        component: TodosComponent
+        path: 'resume',
+        component: ResumeComponent
       }, {
-        path: 'stock-market',
-        component: StockMarketComponent
+        path: 'education',
+        component: EducationComponent
       }, {
-        path: 'theming',
-        component: ParentComponent
+        path: 'about',
+        component: AboutComponent
       }
     ]
   }
@@ -33,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ExamplesRoutingModule { }
+export class ItemRoutingModule { }

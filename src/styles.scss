@@ -18,10 +18,10 @@
 @import 'app/app.component.scss-theme';
 @import 'app/shared/big-input/big-input.component.scss-theme';
 @import 'app/static/about/about.component.scss-theme';
-@import 'app/menu/todos/todos.component.scss-theme';
-@import 'app/menu/stock-market/stock-market.component.sccs-theme';
-@import 'app/menu/theming/parent/parent.component.scss-theme';
-@import 'app/menu/theming/child/child.component.scss-theme';
+@import 'app/menu/resume/resume.component.scss-theme';
+@import 'app/menu/education/education.component.sccs-theme';
+@import 'app/menu/about/parent/parent.component.scss-theme';
+@import 'app/menu/about/child/child.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
   @include anms-styles-reset-theme($theme);
@@ -47,6 +47,10 @@
 .light-theme {
   @include angular-material-theme($anms-light-theme);
   @include custom-components-theme($anms-light-theme);
+}
+
+p {
+  font-size: 16px;
 }
 
 /*Style for loader*/

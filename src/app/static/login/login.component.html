@@ -1,51 +1,29 @@
 <div class="container">
-  <h1 class="main-heading">Contact</h1>
-  <div class="card">
-    <div class="card-header">
-    </div>
-    <div class="card-block">
-      <div class="row">
-        Are you interested in some of the work that I do?<br>
-        Let me know in the form below!<br>
-        Technology I work with:
-      </div>
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="card-title">Frameworks</div>
-          <ul>
-            <li>Angular</li>
-            <li>React</li>
-            <li>HTML5/CSS</li>
-            <li>Word Press</li>
-          </ul>
-        </div>
-        <div class="col-xs-6">
-          <div class="card-title">Back-End</div>
-          <ul>
-            <li>Microsoft Azure</li>
-            <li>Firebase</li>
-            <li>SQL/PHP</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
+    <div class="card">
+      <div class="form-group">
+        <h1>Login to Your Account</h1><br>
+
+        <button class="btn btn-default">Login With Google</button>
+
+        <form>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
+          <div class="login-help text-center"><br>
+            <button disabled class="btn btn-primary" id="quickstart-sign-in" name="signin">Sign In</button>
+            <button class="btn btn-default" id="quickstart-sign-up" name="signup">Sign Up</button>
+            <button class="btn btn-danger" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+          </div>
+        </form>
       </div>
     </div>
+
+  <button disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
+  <!-- Container where we'll display the user details -->
+  <div class="quickstart-user-details-container">
+    Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+    <div>Firebase auth <code>currentUser</code> object value:</div>
+    <pre><code id="quickstart-account-details">null</code></pre>
   </div>
-  <form id="contactForm">
-    <div class="row">
-      <div class="col-sm-6 form-group">
-        <input class="form-control" id="formName" name="name" placeholder="Name" type="text" required>
-      </div>
-      <div class="col-sm-6 form-group">
-        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-      </div>
-    </div>
-    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-    <br>
-    <div class="row">
-      <div class="col-md-12 form-group">
-        <button class="btn btn-success pull-right" type="submit">Send</button>
-      </div>
-    </div>
-  </form>
 </div>
+

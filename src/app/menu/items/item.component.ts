@@ -11,9 +11,9 @@ import { routerTransition } from '@app/core';
 export class ItemComponent implements OnInit {
 
   examples = [
-    { link: 'todos', label: 'Resume' },
-    { link: 'stock-market', label: 'Education' },
-    { link: 'theming', label: 'About Site' },
+    { link: 'resume', label: 'Resume' },
+    { link: 'education', label: 'Education' },
+    { link: 'about', label: 'About Site' },
   ];
 
   constructor() { }

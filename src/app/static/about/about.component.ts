@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
 
 @Component({
@@ -8,11 +8,13 @@ import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  pageTitle = 'Home'
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
 
-  constructor() { }
+  constructor(private title: Title) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.title.setTitle(this.pageTitle);
+  }
 
 }

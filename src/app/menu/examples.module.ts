@@ -5,24 +5,26 @@ import { EffectsModule } from '@ngrx/effects';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 
-import { ExamplesRoutingModule } from './examples-routing.module';
+import { ItemRoutingModule } from './examples-routing.module';
 import { ItemComponent } from './items/item.component';
 
-import { TodosComponent } from './todos/todos.component';
-import { todosReducer } from './todos/todos.reducer';
-import { TodosEffects } from './todos/todos.effects';
-import { StockMarketComponent } from './stock-market/stock-market.component';
-import { stockMarketReducer } from './stock-market/stock-market.reducer';
-import { StockMarketEffects } from './stock-market/stock-market.effects';
-import { StockMarketService } from './stock-market/stock-market.service';
-import { ParentComponent } from './theming/parent/parent.component';
-import { ChildComponent } from './theming/child/child.component';
+import { ResumeComponent } from './resume/resume.component';
+import { todosReducer } from './resume/todos.reducer';
+import { TodosEffects } from './resume/todos.effects';
+
+import { EducationComponent } from './education/education.component';
+import { stockMarketReducer } from './education/stock-market.reducer';
+import { StockMarketEffects } from './education/stock-market.effects';
+import { StockMarketService } from './education/stock-market.service';
+
+import { AboutComponent } from './about/parent/about.component';
+import { ChildComponent } from './about/child/child.component';
 
 @NgModule({
   imports: [
     CoreModule,
     SharedModule,
-    ExamplesRoutingModule,
+    ItemRoutingModule,
     StoreModule.forFeature('examples', {
       todos: todosReducer,
       stocks: stockMarketReducer
@@ -34,9 +36,9 @@ import { ChildComponent } from './theming/child/child.component';
   ],
   declarations: [
     ItemComponent,
-    TodosComponent,
-    StockMarketComponent,
-    ParentComponent,
+    ResumeComponent,
+    EducationComponent,
+    AboutComponent,
     ChildComponent
   ],
   providers: [

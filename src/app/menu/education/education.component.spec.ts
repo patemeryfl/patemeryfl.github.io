@@ -4,13 +4,13 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from '@app/core';
 import { SharedModule } from '@app/shared';
 
-import { ExamplesModule } from '../examples.module';
+import { MenuModule } from '../examples.module';
 
-import { StockMarketComponent } from './stock-market.component';
+import { EducationComponent } from './education.component';
 
-describe('StockMarketComponent', () => {
-  let component: StockMarketComponent;
-  let fixture: ComponentFixture<StockMarketComponent>;
+describe('EducationComponent', () => {
+  let component: EducationComponent;
+  let fixture: ComponentFixture<EducationComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,14 +18,14 @@ describe('StockMarketComponent', () => {
         NoopAnimationsModule,
         CoreModule,
         SharedModule,
-        ExamplesModule
+        MenuModule
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StockMarketComponent);
+    fixture = TestBed.createComponent(EducationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

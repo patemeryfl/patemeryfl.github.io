@@ -18,6 +18,12 @@
 
       <span routerLink="" class="navbar-brand spacer hidden-sm-down">Pat Emery</span>
 
+      <span class="hidden-md-up">
+        <div class="text-center">
+
+        </div>
+      </span>
+
       <span class="hidden-sm-down">
         <button md-button class="nav-button" *ngFor="let item of navigation"
             [routerLink]="[item.link]" routerLinkActive="active">
@@ -25,11 +31,11 @@
         </button>
       </span>
 
-      <!--<button md-button class="sign-in-button"-->
-              <!--*ngIf="!isAuthenticated"-->
-              <!--(click)="onLoginClick()">-->
-        <!--Sign in-->
-      <!--</button>-->
+      <button md-button class="sign-in-button"
+              *ngIf="!isAuthenticated"
+              (click)="onLoginClick()">
+        Sign in
+      </button>
 
       <button *ngIf="isAuthenticated"
               md-icon-button
@@ -46,14 +52,6 @@
       <button md-icon-button routerLink="settings" class="hidden-sm-down">
         <md-icon>settings</md-icon>
       </button>
-
-      <!--<a mdTooltip="Check out my GitHub Projects"-->
-         <!--mdTooltipPosition="before"-->
-         <!--md-icon-button class="link"-->
-         <!--href="https://github.com/patemeryfl"-->
-         <!--target="_blank">-->
-        <!--<i class="fa fa-github fa-2x"></i>-->
-      <!--</a>-->
 
     </md-toolbar>
 
