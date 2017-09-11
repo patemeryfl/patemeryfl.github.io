@@ -18,8 +18,6 @@ import {
   MdTooltipModule
 } from '@angular/material';
 
-import { BigInputComponent } from './big-input/big-input.component';
-import { BigInputActionComponent } from './big-input/big-input-action.component';
 
 @NgModule({
   imports: [
@@ -41,10 +39,7 @@ import { BigInputActionComponent } from './big-input/big-input-action.component'
     MdIconModule,
     MdTooltipModule
   ],
-  declarations: [
-    BigInputComponent,
-    BigInputActionComponent
-  ],
+  declarations: [ ],
   exports: [
     CommonModule,
     FormsModule,
@@ -63,9 +58,6 @@ import { BigInputActionComponent } from './big-input/big-input-action.component'
     MdToolbarModule,
     MdIconModule,
     MdTooltipModule,
-
-    BigInputComponent,
-    BigInputActionComponent
   ]
 })
 export class SharedModule { }

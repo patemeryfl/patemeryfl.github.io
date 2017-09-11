@@ -16,7 +16,6 @@
 
 @import 'styles-reset.scss-theme';
 @import 'app/app.component.scss-theme';
-@import 'app/shared/big-input/big-input.component.scss-theme';
 @import 'app/static/about/about.component.scss-theme';
 @import 'app/menu/resume/resume.component.scss-theme';
 @import 'app/menu/education/education.component.sccs-theme';
@@ -27,7 +26,6 @@
   @include anms-styles-reset-theme($theme);
   @include anms-app-component-theme($theme);
   @include anms-about-component-theme($theme);
-  @include anms-big-input-component-theme($theme);
   @include anms-todos-component-theme($theme);
   @include anms-examples-component-theme($theme);
   @include anms-parent-component-theme($theme);

@@ -15,12 +15,12 @@ import { AppComponent } from './app.component';
 // import { AuthService } from './providers/auth.service';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyBM5UCP8nKL8NMrNIsBznm1qBow26xBF-c",
-  authDomain: "personalportfolio-1ca58.firebaseapp.com",
-  databaseURL: "https://personalportfolio-1ca58.firebaseio.com",
-  projectId: "personalportfolio-1ca58",
-  storageBucket: "personalportfolio-1ca58.appspot.com",
-  messagingSenderId: "350713099700"
+  apiKey: 'AIzaSyBM5UCP8nKL8NMrNIsBznm1qBow26xBF-c',
+  authDomain: 'personalportfolio-1ca58.firebaseapp.com',
+  databaseURL: 'https://personalportfolio-1ca58.firebaseio.com',
+  projectId: 'personalportfolio-1ca58',
+  storageBucket: 'personalportfolio-1ca58.appspot.com',
+  messagingSenderId: '350713099700'
 };
 
 @NgModule({
@@ -40,13 +40,13 @@ export const firebaseConfig = {
     // app
     AppRoutingModule,
 
-    //Firebase
-    //AngularFireModule.initializeApp(firebaseConfig)
+    // Firebase
+    // AngularFireModule.initializeApp(firebaseConfig)
   ],
   declarations: [
     AppComponent
   ],
-  providers: [], //AuthService
+  providers: [], // AuthService
   bootstrap: [AppComponent]
 })
 export class AppModule { }
