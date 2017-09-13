@@ -1,46 +1,24 @@
 <div class="container">
   <h1 class="main-heading">About Site</h1>
-  <div class="card">
-    <div class="card-block">
-      <div class="row">
-        <div class="card-title">
-          <h3>Features</h3>
-            <div class="col-xs-6">
-              <p>Angular</p>
-              <p>NodeJS</p>
-              <p>Express</p>
-            </div>
-            <div class="col-xs-6">
-              <p>Firebase</p>
-              <p>Bootstrap</p>
-              <p>Github</p>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card-title">
-          <h3>Progressiveness</h3>
-            <div class="col-sm-6">
-
-            </div>
-            <div class="col-sm-6">
-
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card-title">
-          <h3>Future Updates</h3>
-          <div class="card-text">
-            <div class="col-sm-6">
-
-            </div>
-            <div class="col-sm-6">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <md-card>
+    <md-card-title>Features</md-card-title>
+    <md-card-content>
+      <ul>
+        <li><b>Angular:</b> This site was built using Angular CLI. Each component was created using Angular Material and Angular Themes</li>
+        <li><b>Express:</b>While this site is being hosted by Firebase, Webpack and Express handed the routing</li>
+        <li><b>Firebase:</b>Site is hosting, Google Authentication, and Database for the blog are on Firebase </li>
+        <li><b>Bootrap:</b>For icons, and general grid/font help</li>
+      </ul>
+      <md-card-title>Progressive Web App</md-card-title>
+      <ul>
+        <li>This site currently has a lighthouse score of: <code>89</code></li>
+        <li>I am hoping to improve this by using text compression and adding more accessability features.</li>
+        <li>It does include a service worker and app manifest for offline use.</li>
+      </ul>
+      <md-card-title>Future Updates</md-card-title>
+      <ul>
+        <li>Coming Soon.</li>
+      </ul>
+    </md-card-content>
+  </md-card>
 </div>

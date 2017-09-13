@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+// import { MdFormFieldModule } from '@angular/material';
 
 import { SharedModule } from '@app/shared';
 
@@ -12,6 +13,7 @@ import { ProjectsComponent } from './projects/projects.component';
   imports: [
     SharedModule,
     StaticRoutingModule
+    // MdFormFieldModule
   ],
   declarations: [
     HomeComponent,

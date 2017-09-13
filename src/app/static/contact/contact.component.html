@@ -1,12 +1,27 @@
 <div class="container">
   <h1 class="main-heading">Contact</h1>
-  <div class="card">
-    <div class="card-block">
-      <div class="row">
-        Are you interested in some of the work that I do?<br>
-        Let me know in the form below!<br>
-        Technology I work with:
-      </div>
+  <md-card>
+    <md-card-content>
+      <md-card-title>Interested In Some of the Work I Do?</md-card-title>
+      <md-card-subtitle>Let me know in the form below!</md-card-subtitle>
+      <form (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="formName" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+          </div>
+          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+          <br>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <button class="btn btn-success pull-right" type="submit">Send</button>
+            </div>
+          </div>
+      </form>
+      <md-card-subtitle>Technology I Work With:</md-card-subtitle>
       <div class="row">
         <div class="col-xs-6">
           <div class="card-title">Frameworks</div>
@@ -27,22 +42,5 @@
           </ul>
         </div>
     </div>
-    <form id="contactForm">
-        <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="formName" name="name" placeholder="Name" type="text" required>
-          </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-          </div>
-        </div>
-        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-        <br>
-        <div class="row">
-          <div class="col-md-12 form-group">
-            <button class="btn btn-success pull-right" type="submit">Send</button>
-          </div>
-        </div>
-    </form>
-  </div>
-</div>
+  </md-card-content>
+</md-card>

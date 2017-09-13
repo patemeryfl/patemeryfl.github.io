@@ -15,6 +15,10 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {}
 
+  onSubmit() {
+    console.log('Sup')
+  }
+
   openLink(link: string) {
     window.open(link, '_blank');
   }

@@ -1,33 +1,32 @@
-.main-heading {
-  font-size: 20px;
-  margin: 0 0 10px -10px
-}
-
 .container {
   margin-top: 0px;
 }
 
-.card {
-  font-size: 17px;
-  background-color: #222222;
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(20px, auto);
 }
 
-.card-block {
-  margin-left: 20px
+md-list-item {
+  height: 30px!important;
 }
-
-.card ul, li {
-  margin-left: 0px;
+md-list {
+  margin-top:-20px;
 }
 
 .main-heading {
+  font-size: 20px;
   text-transform: uppercase;
   margin: 0 0 20px 0
 }
 
-@media screen and (max-width: 400px){
-  ul {
-    margin-left: -55px !important;
+@media screen and (max-width: 745px){
+  md-list-item {
+    height: 50px!important;
+    font-size: 15px!important;
   }
+  span {display: none;}
 }
 

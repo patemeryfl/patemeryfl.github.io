@@ -1,47 +1,27 @@
 <div class="container">
   <h1 class="main-heading">Education</h1>
-  <div class="card">
-    <div class="card-block">
-      <div class="card-title">
-        <h1 class="main-heading">Masters in Software Development</h1>
+
+  <md-card>
+    <md-card-title>M.S. Software Development<md-card-subtitle>Boston University 2019</md-card-subtitle></md-card-title>
+    <md-card-content>
+      <div class="wrapper">
+        <md-list *ngFor="let class of masters | slice:0:4">
+          <md-list-item><span class="fa fa-chevron-right">&nbsp;</span>{{class}}</md-list-item>
+        </md-list>
+        <md-list *ngFor="let class of masters | slice:4:9">
+          <md-list-item><span class="fa fa-chevron-right">&nbsp;</span>{{class}}</md-list-item>
+        </md-list>
       </div>
-      <div class="card-text">
-        <div class="col-xs-6">
-          <ul>
-            <li><p>Information Structures in Python</p></li>
-            <li><p>Data Structures & Algorithms</p></li>
-            <li><p>Advanced Java Programming</p></li>
-            <li><p>Agile Software Development</p></li>
-          </ul>
-        </div>
-        <div class="col-xs-6">
-          <ul>
-            <li><p>Software Designs & Patterns</p></li>
-            <li><p>Information Systems Analysis & Design</p></li>
-            <li><p>Rich Internet Application Development</p></li>
-            <li><p>Server-Side Web Development</p></li>
-          </ul>
-        </div>
+      <br><md-divider></md-divider><br>
+      <md-card-title>B.S. Information Technology<md-card-subtitle>University of South Florida 2017</md-card-subtitle></md-card-title>
+      <div class="wrapper">
+          <md-list *ngFor="let class of bachelors | slice:0:3">
+              <md-list-item><span class="fa fa-chevron-right">&nbsp;</span>{{class}}</md-list-item>
+            </md-list>
+            <md-list *ngFor="let class of bachelors | slice:3:7">
+              <md-list-item><span class="fa fa-chevron-right">&nbsp;</span>{{class}}</md-list-item>
+            </md-list>
       </div>
-      <div class="card-title">
-        <h1 class="main-heading">Bachelors in Information Technology</h1>
-      </div>
-      <div class="card-text">
-        <div class="col-xs-6">
-          <ul>
-            <li><p>Object Oriented Programming</p></li>
-            <li><p>Data Structures & Algorithms</p></li>
-            <li><p>Discrete Math</p></li>
-          </ul>
-        </div>
-        <div class="col-xs-6">
-          <ul>
-            <li><p>Java Programming</p></li>
-            <li><p>Software Engineering Concepts</p></li>
-            <li><p>Operating System Concepts</p></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </md-card-content>
+  </md-card>
+

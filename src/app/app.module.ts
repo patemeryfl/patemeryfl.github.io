@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,7 @@ import { environment } from 'environments/environment';
     // angular
     BrowserAnimationsModule,
     BrowserModule,
+    FormsModule,
 
     // core & shared
     CoreModule,

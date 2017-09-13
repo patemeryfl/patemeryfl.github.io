@@ -1,7 +1,29 @@
 <div class="container">
-  <div class="col-md-12">
     <h1 class="main-heading">Blog</h1>
+    <div style="height:400px; overflow-y: scroll;">
+        <div *ngFor="let blogBody of blogContent | async"
+        [ngClass]="animateOnRouteEnter">
+        <md-card-title>
+            {{ blogBody.title }}
+            <md-card-subtitle>{{ blogBody.date_edited | date:'short'}}</md-card-subtitle>
+          </md-card-title>
+        <md-card class="blog">
+            <md-card-content>
+              <p>{{ blogBody.body }}</p>
+            </md-card-content>
+            <md-card-actions class="text-center">
+                <a md-button href="" target="_blank">
+                  <i class="fa fa-share fa-lg"></i> Share
+                </a>
+                <a md-button href="" target="_blank">
+                  <i class="fa fa-comments fa-lg"></i> Comment
+                </a>
+              </md-card-actions>
+          </md-card>
+        </div>
   </div>
+
+
   <div class="form-group" id="content-creator" hidden>
     <label><p>Title</p></label>
     <input class="form-control" type="text" placeholder="Title" name="title" id="title"><br/>
@@ -11,14 +33,3 @@
       Submit
     </button>
   </div>
-  <div id="content" [ngClass]="animateOnRouteEnter">
-  </div>
-  <div id="details-container">
-      Hey
-      <p *ngFor="let item of items | async">{{item}}</p>
-    </div>
-
-</div>
-<!--<div class="" style="height:315px; overflow-y: scroll;">-->
-
-<!--</div>-->
