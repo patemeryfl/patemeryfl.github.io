@@ -2,6 +2,7 @@
 
 .container {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -10,11 +11,11 @@
 }
 
 .card-block {
-  margin-left: 20px
+ padding: 30px;
 }
 
 .card ul, li {
-  margin-left: 0px;
+  margin-left: -10px!important;
 }
 
 .main-heading {
@@ -22,11 +23,11 @@
   margin: 0 0 20px 0
 }
 
-@media screen and (max-width: 400px){
-  ul {
-    margin-left: -30px !important;
-  }
-  form {
-    margin-left: -20px !important;
-  }
-}
+// @media screen and (max-width: 400px){
+//   ul {
+//     margin-left: -30px !important;
+//   }
+//   form {
+//     margin-left: -20px !important;
+//   }
+// }

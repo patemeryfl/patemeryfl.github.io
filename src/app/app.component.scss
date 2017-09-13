@@ -112,6 +112,13 @@ md-sidenav {
               padding: 0;
             }
           }
+          .sign-in-button {
+            min-width: 0;
+            padding: 0 10px;
+            display: block;
+            position: absolute!important;
+            margin-right: 500px!important;
+          }
         }
 
         @media (max-width: map-get($grid-breakpoints, sm)) {

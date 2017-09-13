@@ -13,6 +13,10 @@
   </div>
   <div id="content" [ngClass]="animateOnRouteEnter">
   </div>
+  <div id="details-container">
+      Hey
+      <p *ngFor="let item of items | async">{{item}}</p>
+    </div>
 
 </div>
 <!--<div class="" style="height:315px; overflow-y: scroll;">-->

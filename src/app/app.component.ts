@@ -11,6 +11,10 @@ import { environment as env } from '@env/environment';
 
 import { selectorSettings } from './settings';
 
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +25,11 @@ import { selectorSettings } from './settings';
 export class AppComponent implements OnInit, OnDestroy {
 
   private unsubscribe$: Subject<void> = new Subject<void>();
-
   @HostBinding('class') componentCssClass;
+
+  user: Observable<firebase.User>;
+  items: FirebaseListObservable<any[]>;
+  msgVal = '';
 
   version = env.versions.app;
   year = new Date().getFullYear();
@@ -40,7 +47,11 @@ export class AppComponent implements OnInit, OnDestroy {
   isAuthenticated;
 
   constructor(public overlayContainer: OverlayContainer,
-              private store: Store<any>) {
+                     public db: AngularFireDatabase,
+                     private auth: AngularFireAuth,
+                     private store: Store<any>) {
+        this.user = auth.authState;
+        this.items = db.list('/article_group/article_list');
   }
 
   ngOnInit(): void {
@@ -57,17 +68,18 @@ export class AppComponent implements OnInit, OnDestroy {
       .takeUntil(this.unsubscribe$)
       .subscribe(auth => this.isAuthenticated = auth.isAuthenticated);
   }
-
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
 
   onLoginClick() {
-    this.store.dispatch(login());
+     this.auth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+     this.store.dispatch(login());
   }
 
   onLogoutClick() {
+    this.auth.auth.signOut();
     this.store.dispatch(logout());
   }
 

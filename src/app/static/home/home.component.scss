@@ -81,6 +81,11 @@
     .get-started {
       width: auto;
     }
+    .container {
+      margin-left: 10px;
+      margin-top: 0px;
+      width: 94%;
+    }
     .ProfilePhoto {
       width: 40%;
     }
@@ -88,7 +93,7 @@
       margin-top: -45%;
       margin-left: 45%;
       padding-bottom:0%;
-      width:100%;
+      width:70%;
       height:120px;
       overflow:none;
     }
@@ -100,7 +105,7 @@
     padding: 40px 0;
 
     h1 {
-      line-height: 1em;
+      line-height: 1.5em;
     }
 
     .actions {
